@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useCallback, useEffect, useState} from 'react';
 import '../css/App.css'
 import '../css/BasicInfo.css'
 import {Box, Slide, Typography} from "@mui/material";
@@ -8,7 +8,7 @@ import ball from '../images/ball.jpg'
 import MySlide from "./Slideshow";
 
 const BasicInfo = () => {
-    const photos = [holiday, profile, ball]; // Replace these with your actual image URLs
+    const [photos] = useState([holiday, profile, ball]); // Replace these with your actual image URLs
     const [albumIndex, setAlbumIndex] = useState(1);
     const [imageStack, setImageStack] = useState<string[]>([photos[1]]);
     const [imageStackDeg, setImageStackDeg] = useState<number[]>([Math.round(Math.random() * (6 - (-6)) - 6)]);
@@ -38,9 +38,10 @@ const BasicInfo = () => {
         }
     };
 
+    const updateAlbumCallback = useCallback(updateAlbum, [albumIndex, imageStack, imageStackDeg, imageStackIteration, imageStackIterationPoint, photos]);
     useEffect(() => {
-        setTimeout(updateAlbum, 5000);
-    }, [albumIndex, imageStack]);
+        setTimeout(updateAlbumCallback, 5000);
+    }, [updateAlbumCallback]);
     useEffect(() => {
         setTimeout(() => {
             setShowAboutMe(true);

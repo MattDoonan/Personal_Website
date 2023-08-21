@@ -1,5 +1,5 @@
-import React, {useEffect, useState} from "react";
-import {Avatar, Button, Card, Link, Typography} from "@mui/material";
+import React from "react";
+import {Avatar, Link, Typography} from "@mui/material";
 import profile from "../images/profile.jpg";
 import '../css/NavBar.css';
 import '../css/App.css';
@@ -7,7 +7,6 @@ import '../css/App.css';
 import cv from '../download/MattDoonanCV.pdf';
 import linkedIn from "../images/linkedIn.png";
 import gitHub from "../images/gitHub.png";
-import MySlide from "./Slideshow";
 
 const NavigationBar = () => {
 

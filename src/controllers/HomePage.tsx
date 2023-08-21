@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import '../css/App.css'
 import Background from "./Background";
 import Title from "./Title";
