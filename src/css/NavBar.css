@@ -1,0 +1,124 @@
+.NavigationBar {
+    height: 100%;
+    width: 20rem;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #0d0d10;
+    overflow-x: hidden;
+    transition: 0.5s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 1rem;
+    gap: 2rem;
+}
+
+.close-btn {
+    position: absolute;
+    top: 0.1rem;
+    right: 0.5rem;
+    font-size: 36px;
+    margin-left: 50px;
+    color: #676a73 !important;
+}
+
+.close-btn:hover {
+    color: #ffffff !important;
+    cursor: pointer;
+}
+
+.nav-area {
+    width: 90%;
+    align-items: center;
+    background-color: #17171e;
+    padding: 1rem 0 1rem 0;
+    border-radius: 0.125rem;
+}
+
+.profile-wrapper {
+    width: 120px;
+    height: 110px;
+    margin: 10px;
+}
+
+.icon {
+    position: absolute;
+    color: #fff;
+    font-size: 55px;
+    top: -57px;
+    left: 57px;
+    transform: translate(-50%, -50%);
+}
+
+.outside-pic {
+    display: block;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    padding: 0;
+    animation: spin 10s linear infinite;
+    border: 2.5px solid transparent;
+    background-image: linear-gradient(rgb(255, 174, 0), rgb(255, 174, 0), transparent, transparent, transparent, transparent, transparent, transparent, transparent);
+    background-clip: padding-box;
+}
+
+.my-info {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 80%;
+    margin-bottom: 0.5rem;
+}
+
+.my-skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    width: 80%;
+    margin-bottom: 0.5rem;
+}
+
+.download-cv {
+    background-color: transparent;
+    color: white;
+    text-decoration: none;
+    border: none;
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
+    font-size: 12px;
+}
+
+.link-nav {
+    gap: 1rem;
+}
+
+.profileLink {
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+}
+
+.profile-wrapper:active .pic {
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .NavigationBar {
+        width: 0;
+    }
+}

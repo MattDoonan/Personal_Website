@@ -1,0 +1,44 @@
+.orange {
+    color: rgb(255, 174, 0);
+    text-align: center;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.profileLink {
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.link-underline {
+    position: relative;
+    max-width: fit-content;
+    align-self: center;
+}
+
+.link-underline::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(255, 174, 0);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.link-underline:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}

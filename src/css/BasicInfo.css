@@ -1,0 +1,18 @@
+.slideshow {
+    position: relative;
+    height: 300px;
+    width: 300px;
+    margin-right: 1rem;
+}
+
+.about-me {
+    max-width: 50%;
+    text-align: left;
+    gap: 1rem;
+}
+
+@media screen and (max-width: 1395px) {
+    .about-me {
+        max-width: 90%;
+    }
+}

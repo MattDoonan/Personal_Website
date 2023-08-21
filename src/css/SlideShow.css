@@ -1,0 +1,15 @@
+.image {
+    width: 300px;
+    height: 300px;
+    border-radius: 1rem;
+    transform: rotate(var(--rotate, 0deg)); /* Use transform to apply the rotation */
+}
+
+.slide {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 300px;
+    height: 300px;
+    transform: rotate(var(--rotate, 0deg)); /* Use transform to apply the rotation */
+}
