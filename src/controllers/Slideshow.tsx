@@ -1,41 +1,66 @@
-import {CardMedia, Slide} from "@mui/material";
+import React, {useCallback, useEffect, useState} from 'react';
 import '../css/SlideShow.css'
+import MySlide from "./Slides";
+
 interface SlideProps {
     direction: 'left' | 'right';
-    in: boolean;
-    mountOnEnter?: boolean;
-    unmountOnExit?: boolean;
-    photo: string;
-    index: number;
+    photosList: string[];
+
 }
 
-const MySlide: React.FC<SlideProps> = ({
-               direction,
-               in: showNewPhoto,
-               mountOnEnter = false,
-               unmountOnExit = false,
-               photo,
-               index
-               }) => {
+const SlideShow: React.FC<SlideProps> = ({
+                        direction,
+                         photosList
+                         }) => {
 
-    const customStyle: React.CSSProperties = {
-        '--rotate': `${index}deg` // Ensure that index is a valid number here
-    } as React.CSSProperties;
+    const [photos] = useState(photosList);
+    const [albumIndex, setAlbumIndex] = useState(1);
+    const [imageStack, setImageStack] = useState<string[]>([photos[1]]);
+    const [imageStackDeg, setImageStackDeg] = useState<number[]>([Math.round(Math.random() * (6 - (-6)) - 6)]);
+    const [imageStackIteration, setImageStackIteration] = useState<number[]>([0]);
+    const [imageStackIterationPoint, setImageStackIterationPoint] = useState<number>(0);
 
-    console.log(index);
+    const updateAlbum = () => {
+        const newIndex = (albumIndex + 1) % photos.length;
+        setAlbumIndex(newIndex);
+        const newDeg = Math.round(Math.random() * (6 - (-6)) - 6);
+        let point = imageStackIterationPoint;
+        point += 1;
+        setImageStackIterationPoint(point);
+        if (imageStack.length === 0) {
+            setImageStack([photos[newIndex]]);
+            setImageStackDeg([newDeg]);
+            setImageStackIteration([point])
+        } else if (imageStack.length < photos.length) {
+            setImageStack([...imageStack, photos[newIndex]]);
+            setImageStackDeg([...imageStackDeg, newDeg]);
+            setImageStackIteration([...imageStackIteration, point]);
+        } else {
+            setImageStack([...imageStack.slice(1), photos[newIndex]]);
+            setImageStackDeg([...imageStackDeg.slice(1), newDeg]);
+            setImageStackIteration([...imageStackIteration.slice(1), point]);
+        }
+    };
+
+    const updateAlbumCallback = useCallback(updateAlbum, [albumIndex, imageStack, imageStackDeg, imageStackIteration, imageStackIterationPoint, photos]);
+    useEffect(() => {
+        setTimeout(updateAlbumCallback, 5000);
+    }, [updateAlbumCallback]);
+
+
     return (
-        <div className={'slide'} style={customStyle}>
-            <Slide direction={direction} in={showNewPhoto} mountOnEnter={mountOnEnter} unmountOnExit={unmountOnExit}>
-                <CardMedia
-                    component="img"
-                    image={photo}
-                    alt="flag"
-                    className="image"
-                    style={customStyle}
+        <div id="slideShow" className="slideshow">
+            {imageStack.map((image, index) => (
+                <MySlide
+                    key={imageStackIteration[index]}
+                    direction="right"
+                    in={true}
+                    photo={image}
+                    index={imageStackDeg[index]}
                 />
-            </Slide>
+            ))}
         </div>
-
     );
 };
-export default MySlide;
+
+export default SlideShow;

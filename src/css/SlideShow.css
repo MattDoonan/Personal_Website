@@ -13,3 +13,10 @@
     height: 300px;
     transform: rotate(var(--rotate, 0deg)); /* Use transform to apply the rotation */
 }
+
+.slideshow {
+    position: relative;
+    height: 300px;
+    width: 300px;
+    margin-right: 1rem;
+}

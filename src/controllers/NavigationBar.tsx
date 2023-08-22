@@ -59,7 +59,7 @@ const NavigationBar = () => {
             </div>
             <div className="horizontal-center nav-area">
                 <Typography variant="body2" sx={{color:"#FFFFFF", fontSize: 12, marginBottom:2, textAlign:"left"}}>
-                    {"Noticeable Skills"}
+                    {"Notable Skills"}
                 </Typography>
                 <div className="my-skills">
                     {listOfSkills.map((skill, index) => (

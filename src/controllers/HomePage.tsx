@@ -1,10 +1,10 @@
 import React from 'react';
 import '../css/App.css'
 import Background from "./Background";
-import Title from "./Title";
-import BasicInfo from "./BasicInfo";
+import AboutMe from "./AboutMe";
+import ImageTitle from "./ImageTitle";
 import NavigationBar from "./NavigationBar";
-
+import MyInterests from "./MyInterests"
 
 const HomePage = () => {
 
@@ -23,8 +23,13 @@ const HomePage = () => {
             <span  className="open-nav" onClick={openNav}>&#9776;</span>
             <NavigationBar/>
             <div className="page-content horizontal-center" id="pageContent">
-                <Title/>
-                <BasicInfo/>
+                <ImageTitle/>
+                <div className="info-content">
+                    <div className="facts horizontal-center">
+                        <AboutMe/>
+                        <MyInterests/>
+                    </div>
+                </div>
             </div>
         </div>
     );
