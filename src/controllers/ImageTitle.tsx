@@ -14,6 +14,11 @@ const ImageTitle = () => {
     const [showGitHub, setShowGitHub] = useState(false);
 
 
+    const navToProfile = () => {
+        window.location.assign('/projects');
+    }
+
+
     useEffect(() => {
         setTimeout(() => {
             setShowName(true);
@@ -72,6 +77,11 @@ const ImageTitle = () => {
                             <Link className="link-underline" underline="none" variant="body2" href="https://github.com/MattDoonan" sx={{color:"white", textAlign:"center"}}>
                                 {'GitHub account'}
                             </Link>
+                        </div>
+                    </Slide>
+                    <Slide direction="right" in={showGitHub} mountOnEnter unmountOnExit>
+                        <div className="profileLink">
+                            <button onClick={navToProfile} className="title-to-project link-underline">Projects</button>
                         </div>
                     </Slide>
                 </div>

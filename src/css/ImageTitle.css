@@ -69,6 +69,24 @@
     text-align: center;
 }
 
+.title-to-project {
+    background-color: #0d0d12;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    color: #ffffff;
+    text-decoration: none;
+    border: none;
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
+    font-weight: 400;
+    font-size: 0.875rem;
+    margin-top: 1rem;
+}
+
+.title-to-project:hover{
+    cursor: pointer;
+}
+
+
 @keyframes blurImage {
     0% {
         filter: blur(0);

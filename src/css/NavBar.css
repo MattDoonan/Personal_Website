@@ -83,6 +83,14 @@
     margin-bottom: 0.5rem;
 }
 
+.navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    width: 80%;
+    gap: 0.5rem;
+}
+
 .download-cv {
     background-color: transparent;
     color: white;
@@ -93,6 +101,19 @@
 }
 
 .download-cv:hover{
+    cursor: pointer;
+}
+
+.change-page {
+    background-color: transparent;
+    color: #ffffff;
+    text-decoration: none;
+    border: none;
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
+    font-size: 12px;
+}
+
+.change-page:hover{
     cursor: pointer;
 }
 

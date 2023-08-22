@@ -29,7 +29,7 @@ const MyInterests = () => {
                         {'My Interests:'}
                     </Typography>
                     <Typography variant="body2" sx={{color:"white", textAlign:"left"}}>
-                        <strong className="orange">Fitness Fan:</strong> {" I love hitting the gym six days a week to stay active and healthy. It's a big part of my daily routine, and I find it an excellent way to maintain discipline and stay goal-oriented."}
+                        <strong className="orange">Fitness Enthusiast:</strong> {" I love hitting the gym six days a week to stay active and healthy. It's a big part of my daily routine, and I find it an excellent way to maintain discipline and stay goal-oriented."}
                     </Typography>
                     <Typography variant="body2" sx={{color:"white", textAlign:"left"}}>
                         <strong className="orange">Money and Markets:</strong> {" Finance, economics, and the stock market fascinate me. I enjoy learning about how money works and how the economy functions."}

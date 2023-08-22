@@ -23,6 +23,18 @@ const NavigationBar = () => {
         document.body.removeChild(anchor);
     };
 
+    const navToHome = () => {
+        if (window.location.pathname !== '/') {
+            window.location.assign('/');
+        }
+    }
+
+    const navToProfile = () => {
+        if (window.location.pathname !== '/projects') {
+            window.location.assign('/projects');
+        }
+    }
+
     const closeNav = () => {
         const nav = document.getElementById("NavigationBar");
         const page = document.getElementById("pageContent");
@@ -56,6 +68,16 @@ const NavigationBar = () => {
                 <Typography variant="body2" sx={{color:"#676a73", fontSize: 12, textAlign:"left"}}>
                     {"University Of Canterbury"}
                 </Typography>
+            </div>
+            <div className="horizontal-center nav-area">
+                <div className="navigation">
+                    <Typography variant="body2" sx={{color:"#ffffff", fontSize: 12, textAlign:"center"}}>
+                        {"- "} <button onClick={navToHome} className="change-page link-underline">Home</button>
+                    </Typography>
+                    <Typography variant="body2" sx={{color:"#ffffff", fontSize: 12, textAlign:"center"}}>
+                        {"- "} <button onClick={navToProfile} className="change-page link-underline">Projects</button>
+                    </Typography>
+                </div>
             </div>
             <div className="horizontal-center nav-area">
                 <Typography variant="body2" sx={{color:"#FFFFFF", fontSize: 12, marginBottom:2, textAlign:"left"}}>

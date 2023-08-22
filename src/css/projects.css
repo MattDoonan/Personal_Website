@@ -1,0 +1,54 @@
+.show-website {
+    max-width: 25rem;
+    border-radius: 1rem;
+}
+
+.a-project {
+    background-color: #0d0d11;
+    box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.27);
+    padding: 2rem 2rem;
+    width: 80vw;
+    border-radius: 0.5rem;
+    gap: 1rem;
+    align-self: center;
+}
+
+.link-to-in {
+    text-decoration: none;
+    color: #676a73;
+}
+
+.project-title {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.project-info {
+    max-width: 35%;
+    text-align: left;
+    gap: 1rem;
+}
+
+@media screen and (max-width: 1507px) {
+    .project-info {
+        max-width: 90%;
+    }
+    .show-website {
+        max-width: 100vw;
+        min-height: 12rem;
+    }
+
+    .a-project {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 964px) {
+    .show-website {
+        min-height: 10rem;
+    }
+}
