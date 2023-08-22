@@ -135,7 +135,6 @@ const NavigationBar = () => {
                 </div>
             </div>
             <button onClick={downloadDocument} className="download-cv link-underline">Download CV</button>
-
         </div>
     );
 }

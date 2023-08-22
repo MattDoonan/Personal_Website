@@ -7,7 +7,6 @@
     left: 0;
     background-color: #0d0d10;
     overflow-x: hidden;
-    overflow-y: hidden;
     transition: 0.5s;
     display: flex;
     flex-direction: column;
@@ -98,6 +97,7 @@
     border: none;
     font-family: "Roboto","Helvetica","Arial",sans-serif;
     font-size: 12px;
+    margin-bottom: 2rem;
 }
 
 .download-cv:hover{
