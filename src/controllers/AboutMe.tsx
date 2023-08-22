@@ -22,7 +22,7 @@ const AboutMe = () => {
     return (
         <Slide direction="left" in={showAboutMe} mountOnEnter unmountOnExit>
             <Box sx={{gap:4}}className="area vertical-center">
-                    <SlideShow direction="left" photosList={photos}/>
+                    <SlideShow direction="right" photosList={photos}/>
                     <div className="horizontal-center about-me">
                         <Typography variant="h5" className="underline" sx={{color:"white", textAlign:"left", alignSelf:"start"}}>
                             {'About me:'}

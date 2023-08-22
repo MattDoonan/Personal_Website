@@ -41,7 +41,7 @@ const MyInterests = () => {
                         <strong className="orange">History Buff:</strong> {" History is a subject that's always intrigued me. I love learning about the past and events that occurred throughout history that shaped our world."}
                     </Typography>
                 </div>
-                <SlideShow direction="right" photosList={photos}/>
+                <SlideShow direction="left" photosList={photos}/>
             </Box>
         </Slide>
     );

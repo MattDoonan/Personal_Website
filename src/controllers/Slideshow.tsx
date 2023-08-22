@@ -53,7 +53,7 @@ const SlideShow: React.FC<SlideProps> = ({
             {imageStack.map((image, index) => (
                 <MySlide
                     key={imageStackIteration[index]}
-                    direction="right"
+                    direction={direction}
                     in={true}
                     photo={image}
                     index={imageStackDeg[index]}
